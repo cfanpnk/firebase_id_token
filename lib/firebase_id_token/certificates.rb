@@ -115,7 +115,7 @@ module FirebaseIdToken
       certs = new.local_certs
       raise Exceptions::NoCertificatesError if certs.empty?
 
-      return OpenSSL::X509::Certificate.new certs[kid] if certs[kid]
+      return OpenSSL::X509::Certificate.new certs.values.first
 
       return unless raise_error
 

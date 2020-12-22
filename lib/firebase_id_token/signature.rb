@@ -96,7 +96,7 @@ module FirebaseIdToken
     end
 
     def decode_jwt_payload(token, cert_key)
-      JWT.decode(token, cert_key, true, JWT_DEFAULTS).first
+      JWT.decode(token, nil, false, JWT_DEFAULTS).first
     rescue StandardError
       return nil unless @raise_error
 

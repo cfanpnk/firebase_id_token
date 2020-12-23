@@ -29,7 +29,7 @@ module FirebaseIdToken
   class Signature
     # Pre-default JWT algorithm parameters as recommended
     # [here](https://goo.gl/uOK5Jx).
-    JWT_DEFAULTS = { algorithm: 'RS256', verify_iat: true }
+    JWT_DEFAULTS = { algorithm: 'RS256', verify_iat: false }
 
     # Returns the decoded JWT hash payload of the Firebase ID Token if the
     # signature in the token matches with one of the certificates downloaded
